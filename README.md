@@ -12,11 +12,11 @@ Steps:
 
   npm install express --save
 
-  Create a file called app.js and add:
+  Create a file called app.js
 
-    Open
+    Open It
 
-    Add:
+    Add this:
     
       const express = require('express')
       const app = express()
@@ -32,7 +32,7 @@ Steps:
 
   From browser
 
-    http://localhost:3000
+    Navigate to http://localhost:3000
 
 That's all !!
 
