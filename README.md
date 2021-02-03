@@ -4,6 +4,8 @@
 
 Steps:
 
+  * You must have installed nodejs *
+  
   mkdir node-project 
 
   cd node-project
