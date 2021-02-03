@@ -1,6 +1,6 @@
 # node-express-server
 
-# Create a Node with Express Project 
+# Create a Node with Express Server
 
 Steps:
 
