@@ -1,6 +1,4 @@
-# node-express-server
-
-# Create a Node with Express Server***
+# Branch 'branch-add-faker'
 
 Steps:
 
