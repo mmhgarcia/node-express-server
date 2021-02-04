@@ -51,3 +51,5 @@ Steps:
     Navigate to http://localhost:3000/vehicles
 
 That's all !!
+
+Link to faker: https://www.npmjs.com/package/faker
