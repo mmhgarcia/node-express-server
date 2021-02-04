@@ -1,43 +1,53 @@
 # Branch 'branch-add-faker'
 
 Steps:
-
-  * You must have installed nodejs *
+    
+  goto node-project (base template), if not installed, clone it!
   
-  mkdir node-project 
-
   cd node-project
 
-  npm init
+  * You must install 'faker' package *
+  npm install faker --save
 
-  npm install express --save
-
-  Create a file called app.js
-
-    Open It
-
+  Open file app.js
+    
     Add this:
     
-      const express = require('express')
-      const app = express()
-      const port = 3000
+      const faker = require('faker')
+      ...
+      ...
 
-      app.get('/', (req, res) => res.send("Welcome to setting up Node.js project tutorial!'))
+      // ADD THIS TEST ENDPOINT
+      app.get('/vehicles', function (req, res) {
+         let arr = [];
+         let antenas = [];
+         for (let i = 0; i < 50; i++) {   
+            arr.push(            
+               {   
+                  vehicle: faker.vehicle.vehicle(),
+                  manufacturer: faker.vehicle.manufacturer(),
+                  model: faker.vehicle.model(),
+                  type: faker.vehicle.type(),
+                  fuel: faker.vehicle.fuel(),
+                  vin: faker.vehicle.vin(),
+                  color: faker.vehicle.color()
+               }            
+            );
+         }
 
-      app.listen(port, () => console.log(‘Application listening on port ${port}!’))
+         let result = {
+            vehicles: arr
+         }
+         res.setHeader('Content-Type', 'application/json');
+         res.end(JSON.stringify(result));
+      });
 
-    Save changes
+  Save changes
 
   Execute node app.js
 
   From browser
 
-    Navigate to http://localhost:3000
+    Navigate to http://localhost:3000/vehicles
 
 That's all !!
-
-https://codehandbook.org/building-node-js-express-app-using-typescript/
-
-clonar:
-
-  git clone https://github.com/mmhgarcia/node-express-server.git
